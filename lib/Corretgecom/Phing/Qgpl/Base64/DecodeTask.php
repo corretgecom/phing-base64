@@ -12,13 +12,20 @@ class DecodeTask extends \Task {
 
     /**
      * The setter for the attribute "string"
+	 * 
+	 * @param string $str
      */
     public function setString($str) {
         $this->string = $str;
     }
 
+	/**
+	 * Set return property 
+	 * 
+	 * @param string $val
+	 */
     public function setReturnProperty($val) {
-	$this->returnProperty = $val;
+		$this->returnProperty = $val;
     }
 
     /**
