@@ -30,6 +30,6 @@
         }
     }, 
     "bin": [
-        "bin/phing/qgpl/base64.xml"
+        "bin/phing/qgpl/corretgecom.qgpl.base64.xml"
     ]
 }
