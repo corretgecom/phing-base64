@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<project basedir="${project.basedir}" >
+
+	<taskdef name="qgpl.base64.encode" classname="Corretgecom\Phing\Qgpl\Base64\EncodeTask" />
+	<taskdef name="qgpl.base64.decode" classname="Corretgecom\Phing\Qgpl\Base64\DecodeTask" />
+
+	<target name="console.qgpl.base64.encode" description="Convertim a Base64 una cadena preguntada" >
+		<input propertyname="stringPlain">Input string to convert to Base64</input>
+		<qgpl.base64.encode string="${stringPlain}" returnProperty="string64" />
+		<echo>${string64}</echo>
+	</target>
+
+	<target name="console.qgpl.base64.decode" description="Convertim a string una cadena Base64 preguntada" >
+		<input propertyname="stringPlain">Input Base64 string to decode</input>
+		<qgpl.base64.decode string="${stringPlain}" returnProperty="string64" />
+		<echo>${string64}</echo>
+	</target>
+</project>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<project name="Phing Base64 Tasks and Targets" basedir="." default="list">
+
+	<!-- Sets the DSTAMP, TSTAMP and TODAY properties -->
+	<tstamp/>
+
+	<!-- Load our configuration. The config.ini.dist, is only to allow installation tasks.
+            The hierarchy is:
+                - etc/local-config.ini
+                - etc/config.ini
+                - etc/config.ini.dist (the only one versioned)
+
+            If we send an argument by command line, it overrides the files
+                -->
+    <if>
+        <available file="etc/local-config.ini"/>
+        <then>
+            <property file="etc/local-config.ini" override="false" />
+        </then>
+    </if>
+
+    <if>
+        <available file="etc/config.ini"/>
+        <then>
+            <property file="etc/config.ini" override="false" />
+        </then>
+    </if>
+
+	<property file="etc/config.ini.dist"  override="false"  />
+
+
+
+	<target name="list" description="List targets">
+
+		<exec command="phing -l" level="verbose" passthru="true" />
+		
+	</target>
+
+
+	<target name="info" description="Info about the project" >
+
+		<exec command="cat README.md" passthru="true"  />
+
+	</target>
+
+	<import file="bin/phing/qgpl/base64.xml" optional="false" />
+
+</project>

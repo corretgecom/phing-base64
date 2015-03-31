@@ -1,0 +1,35 @@
+{
+    "name": "conrretgecom/phing-base64",
+    "description": "Phing Base64 Tasks and Targets.",
+    "keywords": ["phing", "base64"],
+    "homepage": "https://github.com/corretgecom/phing-base64",
+    "license": "LGPL-3.0",
+    "authors": [ 
+        {
+            "name": "Àlex Corretgé",
+            "email": "alex@corretge.cat"
+        }
+	],
+    "support": {
+        "issues": "https://github.com/corretgecom/phing-base64/issues",
+        "irc": "irc://irc.gitter.im/corretgecom/phing-base64"
+    },
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "component-dir": "usr/lib/composer",
+        "vendor-dir": "usr/lib/vendor",
+        "bin-dir" : "usr/bin",
+        "cache-dir" : "var/cache/composer"
+    },   
+    "autoload": {
+        "psr-0": {
+            "Corretgecom\\": "lib/"
+        }
+    }, 
+    "bin": [
+        "bin/phing/qgpl/base64.xml"
+    ]
+}
