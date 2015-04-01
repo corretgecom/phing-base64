@@ -43,6 +43,6 @@
 
 	</target>
 
-	<import file="bin/phing/qgpl/base64.xml" optional="false" />
+	<import file="bin/phing/qgpl/corretgecom.qpgl.base64.xml" optional="false" />
 
 </project>
